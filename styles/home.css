@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --dark-blue: #5175ff;
   --light-blue: #829cff;
@@ -19,7 +23,6 @@
 }
 
 body {
-  box-sizing: border-box;
   margin: 0;
   background: #fafafa;
   font-family: var(--main-font);

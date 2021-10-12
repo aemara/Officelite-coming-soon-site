@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/sign-up.css" />
+    <title>Frontend Mentor | Officelite coming soon site</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <img class="logo" alt="Officelite Logo" src="assets/shared/logo.svg" />
+
+        <div class="header-text">
+          <h1 class="header-text-title">Work smarter. Save time.</h1>
+          <p class="header-text-paragraph">
+            Easily manage your projects. Get on the list and receive in-app
+            perks available only to early subscribers. We are moving into final
+            development and getting ready for official launch soon.
+          </p>
+        </div>
+
+        <div class="header-countdown">
+          <h3 class="header-countdown-text">
+            coming <span class="date">4 nov 2022</span>
+          </h3>
+          <div class="countdown-section">
+            <div class="countdown days">
+              <p class="count">12</p>
+              <p class="unit">days</p>
+            </div>
+            <div class="countdown hours">
+              <p class="count">22</p>
+              <p class="unit">hours</p>
+            </div>
+            <div class="countdown minutes">
+              <p class="count">10</p>
+              <p class="unit">min</p>
+            </div>
+            <div class="countdown seconds">
+              <p class="count">50</p>
+              <p class="unit">sec</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="sign-up-form container">
+      <input type="text" placeholder="Name" />
+      <input type="text" placeholder="Email Address" />
+      <div class="dropdown-menu">
+        <div class="selected-choice">
+          <p>Basic Pack<span class="price">Free</span></p>
+          <svg
+            class="arrow-down"
+            width="13"
+            height="8"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke="#5175FF"
+              stroke-width="2"
+              d="M1 1l5.5 5.5L12 1"
+              fill="none"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+
+        <div class="selection-menu">
+          <ul>
+            <li class="choice">
+              <p>Basic Pack<span class="price">Free</span></p>
+              <svg
+                class="check-icon"
+                width="15"
+                height="12"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 7.504L3.994 10.5 13.494 1"
+                  stroke="#5175FF"
+                  stroke-width="2"
+                  fill="none"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </li>
+            <li class="choice">
+              <p>Pro Pack<span class="price">$9.99</span></p>
+              <svg
+                class="check-icon"
+                width="15"
+                height="12"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 7.504L3.994 10.5 13.494 1"
+                  stroke="#5175FF"
+                  stroke-width="2"
+                  fill="none"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </li>
+            <li class="choice">
+              <p>Ultimate Pack<span class="price">$19.99</span></p>
+              <svg
+                class="check-icon"
+                width="15"
+                height="12"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 7.504L3.994 10.5 13.494 1"
+                  stroke="#5175FF"
+                  stroke-width="2"
+                  fill="none"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <input type="text" placeholder="Phone Number" />
+      <input type="text" placeholder="Company" class="last-input" />
+
+      <a href="#" class="signup-link">Get on the list</a>
+    </main>
+
+    <footer class="background-footer"></footer>
+  </body>
+</html>
