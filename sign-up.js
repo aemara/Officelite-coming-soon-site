@@ -1,9 +1,8 @@
-const dropdownMenu = document.querySelector('.dropdown-menu')
-const selectionMenu = document.querySelector('.selection-menu')
+const dropdownMenu = document.querySelector('.dropdown-menu');
+const selectionMenu = document.querySelector('.selection-menu');
 
-const selectionMenuStyles = window.getComputedStyle(selectionMenu)
-console.log(selectionMenuStyles)
-console.log(selectionMenuStyles.display);
+const selectionMenuStyles = window.getComputedStyle(selectionMenu);
+
 
 dropdownMenu.addEventListener("click", (event) => {
   if (selectionMenuStyles.getPropertyValue("clip-path") === "circle(0% at 100% 0%)") {
