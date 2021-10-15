@@ -9,6 +9,8 @@
   --more-darkish: #25293a;
   --grey: #747b95;
   --tomato: #f05b5b;
+  --placeholder-color: #747b95;
+  --placeholder-opacity: 0.5;
 
   --main-font: "Kumbh Sans", sans-serif;
   --h1-size: 56px;
@@ -251,12 +253,12 @@ SIGN UP FORM
   }
 }
 
-input,
+.input-form,
 .dropdown-menu {
   width: 100%;
 }
 
-input {
+.input-form {
   font-size: 16px;
   color: var(--less-darkish);
   padding-left: 16px;
@@ -266,12 +268,16 @@ input {
   border-bottom: 1px solid rgba(116, 123, 149, 50%);
 }
 
-input::placeholder {
-  color: var(--grey);
-  opacity: 0.5;
+.form-error {
+  background: url("../assets/sign-up/icon-cross.svg") no-repeat right 0.8em top;
 }
 
-input:focus {
+.input-form::placeholder {
+  color: var(--placeholder-color);
+  opacity: var(--placeholder-opacity);
+}
+
+.input-form:focus {
   outline: none;
 }
 

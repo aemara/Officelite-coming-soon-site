@@ -65,3 +65,38 @@ ultimateChoice.addEventListener("click", () => {
 
 //VALIDATING NAME AND EMAIL 
 
+const nameInput = document.querySelector('.name-input');
+const emailInput = document.querySelector('.email-input');
+const emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+nameInput.addEventListener('blur', () => {
+    if(nameInput.value === '') {
+        nameInput.style.setProperty("--placeholder-color", "#F05B5B");
+        nameInput.style.borderColor = "#F05B5B";
+        nameInput.style.setProperty("--placeholder-opacity", "1");
+        nameInput.classList.add('form-error');
+    }
+});
+
+nameInput.addEventListener("focus", () => {
+    nameInput.style.setProperty("--placeholder-color", "--grey");
+    nameInput.style.borderColor = "var(--grey)";
+    nameInput.style.setProperty("--placeholder-opacity", ".5");
+
+    nameInput.classList.remove("form-error");
+}
+);
+
+emailInput.addEventListener('change', () => {
+    if (!emailInput.value.match(emailFormat)) {
+      emailInput.style.setProperty("--placeholder-color", "#F05B5B");
+      emailInput.style.borderColor = "#F05B5B";
+      emailInput.style.setProperty("--placeholder-opacity", "1");
+      emailInput.classList.add("form-error");
+    } else {
+        emailInput.style.setProperty("--placeholder-color", "--grey");
+        emailInput.style.borderColor = "var(--grey)";
+        emailInput.style.setProperty("--placeholder-opacity", ".5");
+        emailInput.classList.remove("form-error");
+    }
+})
