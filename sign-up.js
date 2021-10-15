@@ -1,6 +1,5 @@
 const dropdownMenu = document.querySelector('.dropdown-menu');
 const selectionMenu = document.querySelector('.selection-menu');
-
 const selectionMenuStyles = window.getComputedStyle(selectionMenu);
 
 
@@ -16,15 +15,10 @@ dropdownMenu.addEventListener("click", (event) => {
 })
 
 document.addEventListener("mousedown", (event) => {
-    console.log(selectionMenu.contains(event.target));
   if (
     selectionMenuStyles.getPropertyValue("clip-path") ===
-    "circle(100% at 50% 50%)"
-  ) {
-    if (!selectionMenu.contains(event.target))
-      {
-          selectionMenu.style.clipPath = "circle(0% at 100% 0%"
-      }
+    "circle(100% at 50% 50%)") {
+      selectionMenu.style.clipPath = "circle(0% at 100% 0%";
   }
 })
 
@@ -67,3 +61,7 @@ ultimateChoice.addEventListener("click", () => {
   document.querySelector(".ultimate-choice .check-icon").style.visibility =
     "visible";
 });
+
+
+//VALIDATING NAME AND EMAIL 
+
