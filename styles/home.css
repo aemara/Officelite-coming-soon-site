@@ -456,7 +456,7 @@ footer {
   background: var(--less-darkish);
   width: 20%;
   border-radius: 4px;
-  padding: 10px 0;
+  padding: 0.8em 0;
 }
 @media screen and (min-width: 768px) {
   .countdown {
@@ -501,8 +501,6 @@ footer {
   }
 
   .countdown {
-    padding: 16px 19px;
-    width: 14%;
     border-radius: 13px;
   }
   .count {
@@ -511,6 +509,7 @@ footer {
 
   .unit {
     font-size: 16px;
+    margin-top: 0;
   }
 
   .footer-link {

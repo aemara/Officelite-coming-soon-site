@@ -1,15 +1,18 @@
 const dropdownMenu = document.querySelector('.dropdown-menu');
 const selectionMenu = document.querySelector('.selection-menu');
 const selectionMenuStyles = window.getComputedStyle(selectionMenu);
+const selectionArrowIcon = document.querySelector('.arrow-down');
 
 
 dropdownMenu.addEventListener("click", (event) => {
   if (selectionMenuStyles.getPropertyValue("clip-path") === "circle(0% at 100% 0%)") {
     selectionMenu.style.clipPath = "circle(100% at 50% 50%)";
+    selectionArrowIcon.style.transform = 'rotate(.5turn)';
   } else {
     if (!selectionMenu.contains(event.target))
       {
-          selectionMenu.style.clipPath = "circle(0% at 100% 0%";
+          selectionMenu.style.clipPath = "circle(0% at 100% 0%)";
+          selectionArrowIcon.style.transform = "rotate(90turn)";
       }
   }
 })
@@ -18,7 +21,8 @@ document.addEventListener("mousedown", (event) => {
   if (
     selectionMenuStyles.getPropertyValue("clip-path") ===
     "circle(100% at 50% 50%)") {
-      selectionMenu.style.clipPath = "circle(0% at 100% 0%";
+      selectionMenu.style.clipPath = "circle(0% at 100% 0%)";
+      selectionArrowIcon.style.transform = "rotate(90turn)";
   }
 })
 
