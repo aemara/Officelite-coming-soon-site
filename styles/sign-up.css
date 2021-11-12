@@ -1,255 +1,355 @@
-* {
+/*********
+**********
+    RESET
+    *********
+    *********/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-:root {
-  --dark-blue: #5175ff;
-  --light-blue: #829cff;
-  --less-darkish: #333950;
-  --more-darkish: #25293a;
-  --grey: #747b95;
-  --tomato: #f05b5b;
-  --placeholder-color: #747b95;
-  --placeholder-opacity: 0.5;
-
-  --main-font: "Kumbh Sans", sans-serif;
-  --h1-size: 56px;
-  --h2-size: 20px;
-  --h3-size: 16px;
-  --h1-line: 64px;
-  --h2-line: 28px;
-  --h3-line: 48px;
-  --body1-size: 18px;
-  --body2-size: 16px;
-  --body-line: 28px;
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
 }
 
-body {
+ul,
+ol {
   margin: 0;
-  background: #fafafa;
-  font-family: var(--main-font);
+  padding: 0;
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*********
+**********
+    LAYOUT
+    *********
+    *********/
+body {
+  font-family: "Kumbh Sans", sans-serif;
   display: grid;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: 5fr 2fr;
   grid-template-columns: 1fr;
 }
 
-a {
-  transition: all 0.5s;
-}
-
-@media screen and (min-width: 1024px) {
+@media (min-width: 1100px) {
   body {
+    grid-template-rows: 1fr;
     grid-template-columns: 3fr 1fr;
   }
 }
 
-.container {
-  width: 77%;
-  max-width: 327px;
-  margin: 0 auto;
-}
-
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 673px;
+@media (min-width: 1310px) {
+  body {
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 1.2fr;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .container {
+@media (min-width: 1700px) {
+  body {
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 1.4fr;
+    overflow-y: hidden;
+  }
+}
+.light-background {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  background-color: #fafafa;
+}
+
+@media (min-width: 1100px) {
+  .light-background {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}
+
+.dark-background {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  background-color: #25293a;
+  background-image: url(../assets/home/bg-pattern-footer.svg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .dark-background {
+    background-position: center -900px;
+    background-size: auto;
+  }
+}
+
+@media (min-width: 1100px) {
+  .dark-background {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+}
+
+.main-container {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  width: 85%;
+  margin: 0 auto;
+  z-index: 100;
+  max-width: 400px;
+}
+
+@media (min-width: 768px) {
+  .main-container {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 1100px) {
+  .main-container {
+    grid-column: 1/3;
+    max-width: 1100px;
+    margin-bottom: 3em;
+  }
+}
+
+@media (min-width: 1100px) {
+  main {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+header {
+  padding-top: 3em;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4em;
+}
+
+@media (min-width: 768px) {
+  header {
+    justify-content: start;
+  }
+}
+
+/*********
+**********
+    HERO SECTION
+    *********
+    *********/
+
+.sign-up-hero {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .sign-up-hero {
+    max-width: 570px;
+    margin: 0 auto;
+    margin-bottom: 5em;
+  }
+}
+
+@media (min-width: 1100px) {
+  .sign-up-hero {
+    flex-basis: 50%;
+    margin: 0;
+    align-items: flex-start;
+  }
+}
+
+.hero-text {
+  text-align: center;
+  margin-bottom: 4em;
+}
+
+@media (min-width: 1100px) {
+  .hero-text {
+    text-align: left;
+  }
+}
+
+.hero-text-title {
+  font-size: 2.5rem;
+  color: #333950;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+@media (min-width: 1100px) {
+  .hero-text-title {
+    font-size: 3.5rem;
+    margin-bottom: 0.2em;
+  }
+}
+
+.hero-text-paragraph {
+  color: #747b95;
+}
+
+@media (min-width: 1100px) {
+  .hero-text-paragraph {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .countdown {
+    width: 100%;
+  }
+}
+
+.countdown-date {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #333950;
+  letter-spacing: 5px;
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+
+@media (min-width: 1100px) {
+  .countdown-date {
+    text-align: left;
+  }
+}
+
+.date {
+  color: #5175ff;
+}
+
+.countdown-cells {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3em;
+}
+
+@media (min-width: 768px) {
+  .countdown-cells {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1100px) {
+  .countdown-cells {
     margin: 0;
   }
 }
 
-/******************
-HEADER
-******************/
-
-.main {
-  background: url("../assets/home/bg-pattern-header.svg");
-  background-position: -15px -130px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  grid-row: 1/2;
-  grid-column: 1/2;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-@media screen and (min-width: 768px) {
-  .main {
-    background: none;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .main {
-    flex-direction: row;
-    flex-wrap: wrap;
-    grid-row: 1/2;
-    grid-column: 1/3;
-    margin-bottom: 299px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .main-text-countdown {
-    align-items: center;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .main-text-countdown {
-    width: 40%;
-  }
-}
-
-.main > .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.logo {
-  width: 155px;
-  margin-top: 46px;
-  margin-bottom: 80px;
-}
-
-@media screen and (min-width: 768px) {
-  .logo {
-    align-self: flex-start;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .logo {
-    margin-bottom: 154px;
-  }
-}
-
-.header-text {
+.countdown-cell {
+  background: rgba(81, 117, 255, 0.1);
   text-align: center;
-  margin-bottom: 64px;
-}
-
-.header-text-title {
-  margin-top: 0;
-  margin-bottom: 24px;
-  font-size: 40px;
-  font-weight: bold;
-}
-
-@media screen and (min-width: 1024px) {
-  .header-text {
-    text-align: left;
-  }
-
-  .header-text-title {
-    font-size: 56px;
-  }
-}
-
-.header-text-paragraph {
-  font-size: var(--body2-size);
-  color: var(--grey);
-  margin-bottom: 0;
-}
-
-@media screen and (min-width: 1024px) {
-  .header-text-paragraph {
-    font-size: 18px;
-  }
-}
-
-.header-countdown {
-  width: 100%;
-}
-
-@media screen and (min-width: 768px) {
-  .header-countdown {
-    max-width: 448px;
-  }
-}
-
-.header-countdown-text {
-  text-align: center;
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  margin-top: 0;
-  margin-bottom: 18px;
-  line-height: 48px;
-}
-
-.date {
-  color: var(--dark-blue);
-}
-
-.countdown-section {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-}
-
-.countdown {
-  background-color: rgba(81, 117, 255, 10%);
-  width: 20%;
+  padding: 0.6em 1.2em;
   border-radius: 4px;
-  padding: 10px 0;
-  text-align: center;
 }
 
-.count {
-  color: var(--dark-blue);
-  font-size: 32px;
-  font-weight: bold;
-  margin: 0;
+@media (min-width: 768px) {
+  .countdown-cell {
+    border-radius: 13px;
+  }
+}
+
+.count-number {
+  font-size: 2rem;
+  color: #5175ff;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .count-number {
+    font-size: 3.5rem;
+  }
 }
 
 .unit {
-  font-size: 12px;
-  font-weight: bold;
-  margin-bottom: 0;
-  color: rgba(51, 57, 80, 50%);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #333950;
+  opacity: 0.5;
 }
 
-@media screen and (min-width: 768px) {
-  .count {
-    font-size: 56px;
-  }
-
+@media (min-width: 768px) {
   .unit {
-    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 700;
   }
 }
 
-/******************
-SIGN UP FORM
-******************/
+/*********
+**********
+    SIGN UP FORM
+    *********
+    *********/
 
 .sign-up-form {
-  grid-row: 1/2;
-  grid-column: 1/2;
   background: #ffffff;
-  padding: 24px;
-  height: min-content;
+  padding: 2em;
   border-radius: 13px;
+  margin-bottom: 4em;
+  filter: drop-shadow(0 50px 25px rgba(75, 92, 154, 0.23));
+  /* box-shadow: 50px 0 50px -25px #4b5c9a; */
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .sign-up-form {
-    max-width: 448px;
-    padding: 40px 42px 50px 42px;
+    max-width: 450px;
+    margin: 0 auto;
+    margin-bottom: 7em;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1100px) {
   .sign-up-form {
-    align-self: flex-end;
-    width: 35%;
+    flex-basis: 40%;
+    margin: 0;
   }
 }
 
@@ -259,11 +359,11 @@ SIGN UP FORM
 }
 
 .input-form {
-  font-size: 16px;
-  color: var(--less-darkish);
-  padding-left: 16px;
-  padding-bottom: 17px;
-  margin-bottom: 24px;
+  font-size: 1rem;
+  color: #333950;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  margin-bottom: 1.5em;
   border: none;
   border-bottom: 1px solid rgba(116, 123, 149, 50%);
 }
@@ -273,8 +373,8 @@ SIGN UP FORM
 }
 
 .input-form::placeholder {
-  color: var(--placeholder-color);
-  opacity: var(--placeholder-opacity);
+  color: var(--placeholder-color, #747b95);
+  opacity: var(--placeholder-opacity, 1);
 }
 
 .input-form:focus {
@@ -285,22 +385,22 @@ SIGN UP FORM
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid rgba(116, 123, 149, 50%);
-  margin-bottom: 24px;
-  padding-left: 16px;
-  padding-bottom: 17px;
-  padding-right: 28px;
+  margin-bottom: 1.5em;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  padding-right: 1.5em;
   cursor: pointer;
 }
 
 .selected-choice p {
-  color: var(--less-darkish);
+  color: #333950;
   font-weight: bold;
   margin: 0;
 }
 
 .selected-choice p span {
   opacity: 0.4;
-  margin-left: 8px;
+  margin-left: 0.5em;
 }
 
 .arrow-icon {
@@ -313,35 +413,29 @@ SIGN UP FORM
   background: #ffffff;
   border: 1px solid rgba(116, 123, 149, 15.3%);
   border-radius: 8px;
-  padding: 24px 39px 24px 32px;
+  padding: 1.5em 2em;
   z-index: 1000;
   clip-path: circle(0% at 100% 0%);
   transition: clip-path 0.3s ease-in-out;
 }
 
-.selection-menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 .selection-menu ul li {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 16px;
+  padding-bottom: 1em;
   border-bottom: 1px solid rgba(116, 123, 149, 50%);
-  margin-bottom: 16px;
+  margin-bottom: 1em;
 }
 
 .selection-menu ul li p {
-  color: var(--less-darkish);
+  color: #333950;
   font-weight: bold;
   margin: 0;
 }
 
 .selection-menu .price {
   opacity: 0.4;
-  margin-left: 8px;
+  margin-left: 0.5em;
 }
 
 .selection-menu .check-icon {
@@ -349,7 +443,7 @@ SIGN UP FORM
 }
 
 .last-input {
-  margin-bottom: 40px;
+  margin-bottom: 2.5em;
 }
 
 .choice:hover {
@@ -362,56 +456,20 @@ SIGN UP FORM
 }
 
 .signup-link {
-  background: var(--dark-blue);
+  background: #5175ff;
   text-decoration: none;
   color: #ffffff;
-  padding: 14px 41px;
+  padding: 1em 2em;
   border-radius: 28px;
   font-weight: bold;
   display: block;
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
-  .signup-link {
-    width: 100%;
-  }
-}
-
 .signup-link:hover {
-  background: var(--light-blue);
+  background: #829cff;
 }
 
 .signup-link:focus {
-  background: var(--light-blue);
-}
-
-.background-footer {
-  grid-row: 1/2;
-  grid-column: 1/2;
-  background-color: var(--more-darkish);
-  background-image: url(../assets/home/bg-pattern-footer.svg);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 320px;
-  z-index: -1000;
-  margin-top: 916px;
-}
-
-@media screen and (min-width: 768px) {
-  .background-footer {
-    background-position: center -900px;
-    background-size: auto;
-    margin-top: 938px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .background-footer {
-    grid-row: 1/2;
-    grid-column: 2/2;
-    height: 100%;
-    margin-top: 0;
-  }
+  background: #829cff;
 }

@@ -16,117 +16,123 @@
       href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/index.css" />
     <title>Frontend Mentor | Officelite coming soon site</title>
   </head>
   <body>
-    <header>
-      <div class="container">
-        <img class="logo" alt="Officelite Logo" src="assets/shared/logo.svg" />
-
-        <div class="header-text-charts">
-          <img
-            class="charts"
-            alt="Illustration of Charts"
-            src="assets/home/illustration-charts.svg"
-          />
-
-          <div class="header-text">
-            <h1 class="header-text-title">
+    <div class="main-container">
+      <header>
+        <img src="assets/shared/logo.svg" alt="logo" />
+      </header>
+      <main>
+        <section class="hero-section">
+          <div class="hero-text">
+            <h1 class="hero-text-title">
               A simple solution to complex tasks is coming soon
             </h1>
-            <p class="header-text-paragraph">
+            <p class="hero-text-paragraph">
               Say goodbye to inefficient juggling of multiple apps, teams, and
               projects. Officelite is the new collaboration platform built with
-              an intuitive interface to improve productivity
+              an intuitive interface to improve productivity.
             </p>
-            <a class="header-link" href="./sign-up.html">Get Started</a>
+            <a class="hero-link" href="sign-up.html">get started</a>
           </div>
-        </div>
-      </div>
-    </header>
+          <img
+            class="hero-charts"
+            src="assets/home/illustration-charts.svg"
+            alt="charts"
+          />
+        </section>
+        <section class="pricing-section">
+          <h2 hidden>Pricing Section</h2>
+          <div class="pricing-component-basic pricing-component">
+            <div class="name-and-price">
+              <h2 class="pricing-component-name">Basic</h2>
+              <div class="pricing-component-price">
+                <h3 class="price">Free</h3>
+                <p>Up to 5 users for free</p>
+              </div>
+            </div>
+            <div class="pricing-component-features">
+              <ul>
+                <li>Basic document collaboration</li>
+                <li>2 GB storage</li>
+                <li>Great security and support</li>
+              </ul>
+            </div>
+            <a href="./sign-up.html" class="pricing-component-link"
+              >Try for Free</a
+            >
+          </div>
+          <div class="pricing-component-pro pricing-component">
+            <div class="name-and-price">
+              <h2 class="pricing-component-name">Pro</h2>
+              <div class="pricing-component-price">
+                <h3 class="price">$9.99</h3>
+                <p>Per user, billed monthly</p>
+              </div>
+            </div>
+            <div class="pricing-component-features">
+              <ul>
+                <li>All essential integrations</li>
+                <li>50 GB storage</li>
+                <li>More control and insights</li>
+              </ul>
+            </div>
+            <a href="./sign-up.html" class="pricing-component-link"
+              >Try for Free</a
+            >
+          </div>
+          <div class="pricing-component-ultimate pricing-component">
+            <div class="name-and-price">
+              <h2 class="pricing-component-name">Ultimate</h2>
+              <div class="pricing-component-price">
+                <h3 class="price">$19.99</h3>
+                <p>Per user, billed monthly</p>
+              </div>
+            </div>
+            <div class="pricing-component-features">
+              <ul>
+                <li>Robust work management</li>
+                <li>100 GB storage</li>
+                <li>VIP upport</li>
+              </ul>
+            </div>
+            <a href="./sign-up.html" class="pricing-component-link"
+              >Try for Free</a
+            >
+          </div>
+        </section>
+      </main>
 
-    <main class="pricing-section">
-      <div class="pricing-component-basic pricing-component">
-        <div class="name-and-price">
-          <h2 class="pricing-component-name">Basic</h2>
-          <div class="pricing-component-price">
-            <h1>Free</h1>
-            <p>Up to 5 users for free</p>
-          </div>
-        </div>
-        <div class="pricing-component-features">
-          <ul>
-            <li>Basic document collaboration</li>
-            <li>2 GB storage</li>
-            <li>Great security and support</li>
-          </ul>
-        </div>
-        <a href="./sign-up.html" class="pricing-component-link">Try for Free</a>
-      </div>
-      <div class="pricing-component-pro pricing-component">
-        <div class="name-and-price">
-          <h2 class="pricing-component-name">Pro</h2>
-          <div class="pricing-component-price">
-            <h1>$9.99</h1>
-            <p>Per user, billed monthly</p>
-          </div>
-        </div>
-        <div class="pricing-component-features">
-          <ul>
-            <li>All essential integrations</li>
-            <li>50 GB storage</li>
-            <li>More control and insights</li>
-          </ul>
-        </div>
-        <a href="./sign-up.html" class="pricing-component-link">Try for Free</a>
-      </div>
-      <div class="pricing-component-ultimate pricing-component">
-        <div class="name-and-price">
-          <h2 class="pricing-component-name">Ultimate</h2>
-          <div class="pricing-component-price">
-            <h1>$19.99</h1>
-            <p>Per user, billed monthly</p>
-          </div>
-        </div>
-        <div class="pricing-component-features">
-          <ul>
-            <li>Robust work management</li>
-            <li>100 GB storage</li>
-            <li>VIP upport</li>
-          </ul>
-        </div>
-        <a href="./sign-up.html" class="pricing-component-link">Try for Free</a>
-      </div>
-    </main>
-
-    <footer>
-      <div class="footer-content">
-        <div class="footer-text-countdown">
-          <h3 class="footer-text">
+      <footer>
+        <div class="footer-countdown">
+          <h2 class="footer-countdown-date">
             coming <span class="date">4 nov 2022</span>
-          </h3>
-          <div class="countdown-section">
+          </h2>
+          <div class="countdown-cells">
             <div class="countdown days">
-              <p class="count">12</p>
+              <p class="count-number">12</p>
               <p class="unit">days</p>
             </div>
             <div class="countdown hours">
-              <p class="count">22</p>
+              <p class="count-number">22</p>
               <p class="unit">hours</p>
             </div>
             <div class="countdown minutes">
-              <p class="count">10</p>
+              <p class="count-number">10</p>
               <p class="unit">min</p>
             </div>
             <div class="countdown seconds">
-              <p class="count">50</p>
+              <p class="count-number">50</p>
               <p class="unit">sec</p>
             </div>
           </div>
         </div>
-        <a href="./sign-up.html" class="footer-link">Get Started</a>
-      </div>
-    </footer>
+        <a class="footer-link" href="./sign-up.html">Get Started</a>
+      </footer>
+    </div>
+    <div class="light-background"></div>
+    <div class="dark-background"></div>
   </body>
 </html>

@@ -1,64 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/favicon-32x32.png"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles/sign-up.css" />
-    <title>Frontend Mentor | Officelite coming soon site</title>
-  </head>
-  <body>
-    <div class="main">
-      <div class="main-text-countdown container">
-        <img class="logo" alt="Officelite Logo" src="assets/shared/logo.svg" />
-
-        <div class="header-text">
-          <h1 class="header-text-title">Work smarter. Save time.</h1>
-          <p class="header-text-paragraph">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="styles/sign-up.css">
+  <title>Officelite coming soon site</title>
+</head>
+<body>
+ <div class="main-container">
+    <header>
+       <img src="assets/shared/logo.svg" alt="logo" />
+    </header>
+    <main>
+      <section class="sign-up-hero">
+        <div class="hero-text">
+          <h1 class="hero-text-title">Work smarter. Save time.</h1>
+          <p class="hero-text-paragraph">
             Easily manage your projects. Get on the list and receive in-app
             perks available only to early subscribers. We are moving into final
             development and getting ready for official launch soon.
           </p>
         </div>
 
-        <div class="header-countdown">
-          <h3 class="header-countdown-text">
+        <div class="countdown">
+          <h3 class="countdown-date">
             coming <span class="date">4 nov 2022</span>
           </h3>
-          <div class="countdown-section">
-            <div class="countdown days">
-              <p class="count">12</p>
+          <div class="countdown-cells">
+            <div class="countdown-cell days">
+              <p class="count-number">12</p>
               <p class="unit">days</p>
             </div>
-            <div class="countdown hours">
-              <p class="count">22</p>
+            <div class="countdown-cell hours">
+              <p class="count-number">22</p>
               <p class="unit">hours</p>
             </div>
-            <div class="countdown minutes">
-              <p class="count">10</p>
+            <div class="countdown-cell minutes">
+              <p class="count-number">10</p>
               <p class="unit">min</p>
             </div>
-            <div class="countdown seconds">
-              <p class="count">50</p>
+            <div class="countdown-cell seconds">
+              <p class="count-number">50</p>
               <p class="unit">sec</p>
             </div>
           </div>
-        </div>
-      </div>
+      </section>
 
-      <div class="sign-up-form container">
+      <section class="sign-up-form">
         <input
           class="input-form name-input"
           name="name"
@@ -75,7 +65,7 @@
           <div class="selected-choice">
             <p>Basic Pack<span class="price">Free</span></p>
             <svg
-              class="arrow-down"
+              class="arrow-icon"
               width="13"
               height="8"
               xmlns="http://www.w3.org/2000/svg"
@@ -153,18 +143,21 @@
           placeholder="Phone Number (Optional)"
         />
         <input
-          class="input-form"
+          class="input-form last-input"
           type="text"
           placeholder="Company (Optional)"
-          class="last-input"
         />
 
         <a href="#" class="signup-link">Get on the list</a>
-      </div>
-    </div>
+      </section>
+      
+    </main>
 
-    <footer class="background-footer"></footer>
+    
+ </div>
 
-    <script src="sign-up.js"></script>
-  </body>
+ <div class="light-background"></div>
+  <div class="dark-background"></div>
+  <script src="sign-up.js"></script>
+</body>
 </html>
